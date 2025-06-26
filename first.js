@@ -6,5 +6,6 @@ console.log(allClass);
  const section=document.getElementById('section-container');
  section.style.color='red';
  section.style.background='tomato'
+ allClass[0].style.color='blue'
 
 
