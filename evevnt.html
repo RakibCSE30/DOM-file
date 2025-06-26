@@ -6,16 +6,35 @@
     <title>Event for html</title>
 </head>
 <body>
-    <h1>Dom event </h1>
+    <section hidden>
+        <h1>Dom event </h1>
     <button title="button" onclick= clickMe() >makeRed</button>
     <h1 id="textFormet">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, eaque! Omnis consectetur dignissimos in, ut quam eum itaque, similique dolorem saepe a eaque iure!
     </h1>
     <button id="blueButton">makeBlue</button>
+    </section>
+    <br>
+    <br>
+    <h1>Input field</h1>
+    <p id="input-text-display">Defult text</p>
+
+    <input id="input-field" type="text">
+    <button id="update-button">update</button>
 
      
     <script src="eventjs/e1.js"></script>
     <script>
+        document.getElementById('update-button').addEventListener('click',function(){
+             
+             document.body.style.backgroundColor='pink';
+             const inputField = document.getElementById('input-field');
+             const inputText= inputField.value;
+             console.log(inputText);
+             const p= document.getElementById('input-text-display');
+             p.innerText=inputText;
+             inputField.value='';
+        })
       
 
         
