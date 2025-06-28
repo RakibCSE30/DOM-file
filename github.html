@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="secrite-info">My secrite info</h1>
+    <input type="text" name="" id="text-input">
+    <button id="btn-delete" disabled> delete</button>
+
+
+    <script>
+        document.getElementById('text-input').addEventListener('keyup',function(event){
+            const text=event.target.value;
+            console.log(text);
+            const btn=document.getElementById('btn-delete');
+            if(text ==='delete'){
+                btn.removeAttribute('disabled');
+
+            }
+            else
+            {
+                btn.setAttribute('disabled',true);
+            }
+
+
+        })
+        document.getElementById('btn-delete').addEventListener('click',function(){
+            const info=document.getElementById('secrite-info');
+            info.innerText='';
+        })
+    </script>
+    
+</body>
+</html>
